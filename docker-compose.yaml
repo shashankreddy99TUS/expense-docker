@@ -4,11 +4,10 @@ networks:
 volumes: 
  mysql:
 services:
-
   backend:
      image: backend:1.0.0
      networks:
-     - expose:
+     - expense
      container_name: backend
      depends_on:
       - mysql
@@ -20,8 +19,6 @@ services:
    container_name: mysql
    volumes:
    - mysql:/var/lib/mysql 
-
-  
 
    frontend:
        image: frontend:1.0.0 
