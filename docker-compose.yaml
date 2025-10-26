@@ -12,7 +12,7 @@ services:
      container_name: backend
      depends_on:
       - mysql
-  environment:
+     environment:
       - DB_HOST=mysql
       - DB_USER=root
       - DB_PASSWORD=ExpenseApp@1
